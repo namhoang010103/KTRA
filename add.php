@@ -78,10 +78,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <option value="Nữ">Nữ</option>
                 </select>
             </div>
-            <div class="mb-3">
-                <label for="hinh_anh" class="form-label">Hình Ảnh</label>
-                <input type="file" class="form-control" id="hinh_anh" name="hinh_anh" accept="image/*">
-            </div>
             <button type="submit" class="btn btn-primary">Thêm</button>
             <a href="index.php" class="btn btn-secondary">Hủy</a>
         </form>

@@ -84,17 +84,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <option value="Nữ" <?php if($row['Gioi_Tinh'] == 'Nữ') echo 'selected'; ?>>Nữ</option>
                 </select>
             </div>
-            <div class="mb-3">
-                <label for="hinh_anh" class="form-label">Hình Ảnh</label>
-                <input type="file" class="form-control" id="hinh_anh" name="hinh_anh" accept="image/*">
-                <img src="<?php 
-                    $image_path = $row['Hinh_Anh'];
-                    if (empty($image_path) || $image_path === 'images/default.jpg') {
-                        $image_path = ($row['Gioi_Tinh'] === 'Nam') ? 'images/male_default.jpg' : 'images/female_default.jpg';
-                    }
-                    echo $image_path;
-                ?>" class="mt-2" style="width: 100px; height: 100px;" alt="Hình ảnh hiện tại">
-            </div>
             <button type="submit" class="btn btn-primary">Cập Nhật</button>
             <a href="index.php" class="btn btn-secondary">Hủy</a>
         </form>
